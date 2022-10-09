@@ -1,8 +1,8 @@
 <?php
-if (! function_exists(":package_slug")) {
-    /** Create a function. */
-    function ":package_slug"()
-    {
-        return;
-    }
-}
+// if (! function_exists('xxxxxxx')) {
+//     /** Create a function. */
+//     function xxxxxxx()
+//     {
+//         return;
+//     }
+// }
