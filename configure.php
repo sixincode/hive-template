@@ -56,7 +56,7 @@ function title_case(string $subject): string
 
 function title_snake(string $subject, string $replace = '_'): string
 {
-    return str_replace(['-', '_'], $replace, $subject);
+    return str_replace([' * ', '_'], $replace, $subject);
 }
 
 function replace_in_file(string $file, array $replacements): void

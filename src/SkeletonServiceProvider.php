@@ -13,7 +13,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
         /*
          * This class is a Package Service Provider
          *
-         * More info: https://github.com/spatie/laravel-package-tools
+         * More info: https://github.com/sixincode/hive-template
          */
         $package
             ->name('skeleton')
