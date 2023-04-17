@@ -5,6 +5,8 @@ namespace VendorName\Skeleton;
 use Sixincode\ModulesInit\Package;
 use Sixincode\ModulesInit\PackageServiceProvider;
 use VendorName\Skeleton\Commands\SkeletonCommand;
+use Illuminate\Support\Facades\Blade;
+use Livewire\Livewire;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {
@@ -17,8 +19,13 @@ class SkeletonServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('skeleton')
-            ->hasConfigFile()
+            ->hasConfigFile(['skeleton','skeleton-components','skeleton-layouts'])
             ->hasViews()
+            ->hasAssets()
+            ->hasTranslations()
+            ->hasBladeComponents()
+            // ->hasLayouts()
+            ->hasRoutes(['web'])
             ->hasMigration('create_skeleton_table')
             ->hasCommand(SkeletonCommand::class);
     }
