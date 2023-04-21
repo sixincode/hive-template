@@ -19,14 +19,15 @@ class SkeletonServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('skeleton')
-            ->hasConfigFile(['skeleton','skeleton-components','skeleton-layouts'])
+            ->hasConfigFile(['skeleton'])
             ->hasViews()
             ->hasAssets()
             ->hasTranslations()
-            ->hasBladeComponents()
+            // ->hasBladeComponents()
             // ->hasLayouts()
             ->hasRoutes(['web'])
             ->hasMigration('create_skeleton_table')
+            // ->runsMigrations()
             ->hasCommand(SkeletonCommand::class);
     }
 }
