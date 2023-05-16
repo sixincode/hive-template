@@ -5,6 +5,9 @@ use VendorName\Skeleton\Http\Controllers\Central as Controllers;
 
 // Route::middleware(
 //   config('skeleton', ['web']),
-// )->name('skeleton.')->group(function () {
-// Route::get('/',         [Controllers\LandingController::class, 'mainLanding'])->name('landing');
+// )
+// ->prefix('skeleton')
+// ->name('skeleton.')
+// ->group(function () {
+//    Route::get('/',  [Controllers\LandingController::class, 'mainLanding'])->name('landing');
 // });
