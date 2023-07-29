@@ -25,6 +25,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->hasTranslations()
             // ->hasBladeComponents()
             // ->hasLayouts()
+            // ->hasIcons()
             ->hasRoutes(['web'])
             ->hasMigration('create_skeleton_table')
             // ->runsMigrations()
