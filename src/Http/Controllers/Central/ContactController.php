@@ -5,7 +5,7 @@ namespace VendorName\Skeleton\Http\Controllers\Central;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class ContactController extends Controller
 {
     public function mainLanding()
     {

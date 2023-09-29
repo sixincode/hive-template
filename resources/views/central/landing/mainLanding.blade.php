@@ -1,3 +1,3 @@
 <x-hive-display-layout>
-  Main Landing for skeleton
+  <livewire:skeleton-central-landing-main />
 </x-hive-display-layout>

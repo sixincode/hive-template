@@ -1,3 +1,5 @@
 <div class="">
-  main contact livewire
+  <x-skeleton-central-contact-top />
+  <x-skeleton-central-contact-two />
+  <x-skeleton-central-contact-three />
 </div>

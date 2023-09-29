@@ -18,7 +18,8 @@
     "require": {
         "php": "^8.1",
         "illuminate/contracts": "^10.0",
-        "sixincode/modules-init": "^1.0"
+        "sixincode/hive-alpha": "dev-main",
+        "sixincode/modules-init": "dev-main"
     },
     "require-dev": {
         "laravel/pint": "^1.0",

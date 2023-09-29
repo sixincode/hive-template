@@ -1,3 +1,5 @@
 <div class="">
-  main about livewire
+  <x-skeleton-central-about-top />
+  <x-skeleton-central-about-two />
+  <x-skeleton-central-about-three />
 </div>
