@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
-    public function mainLanding()
+    public function mainAbout()
     {
       return view('skeleton::central.about.mainAbout');
     }

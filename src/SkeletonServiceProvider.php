@@ -25,7 +25,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasAssets()
             ->hasTranslations()
-            // ->hasBladeComponents()
+            ->hasBladeComponents()
             // ->hasLayouts()
             // ->hasIcons()
             ->hasRoutes(['web','api','admin','user'])

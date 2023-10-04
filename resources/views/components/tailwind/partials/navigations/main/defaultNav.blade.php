@@ -4,7 +4,7 @@
       <div class="flex lg:px-0 items-center">
         <div class="flex-shrink-0 flex items-center">
           <a href="/">
-            <img id="mainLogo" class="mx-auto w-12 p-2 rounded-full" src="{{asset('/vendor/skeleton/img/logo.png')}}" alt="skeleton"/>
+            <img id="mainLogo" class="mx-auto w-12 p-2 rounded-full" src="{{asset('/vendor/skeleton/img/logo.png')}}" alt="logo"/>
           </a>
         </div>
         <div class="hidden lg:ml-6 lg:flex lg:space-x-4">
@@ -41,7 +41,7 @@
 
       <div class="hidden lg:ml-4 lg:flex lg:items-center">
         <div class="flex justify-center space-x-6">
-          <x-hive-display-lang-switch route='{{ check_lang_route() }}' :values='{{ config("skeleton.translations") }}' />
+          <x-hive-display-lang-switch />
         </div>
       </div>
 

@@ -3,7 +3,7 @@
 // config for VendorName/Skeleton
 return [
   'title'         => 'skeleton',
-
+  'slogan'         => '',
   // translations
   'use_translations'  => true,
   'default_lang'  => 'en',

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function mainLanding()
+    public function mainContact()
     {
       return view('skeleton::central.contact.mainContact');
     }
