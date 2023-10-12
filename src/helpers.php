@@ -107,6 +107,20 @@
     }
   }
 
+  if (! function_exists('hasTeamOwnershipOnCreateFeatures')) {
+    function hasTeamOwnershipOnCreateFeatures()
+    {
+        return config('skeleton-features.hasTeamOwnershipOnCreateFeatures');
+    }
+  }
+
+  if (! function_exists('hasTeamAppDefaultMembershipFeatures')) {
+    function hasTeamAppDefaultMembershipFeatures()
+    {
+        return config('skeleton-features.hasTeamAppDefaultMembershipFeatures');
+    }
+  }
+
   if (! function_exists('hasSubscriptionFeatures')) {
     function hasSubscriptionFeatures()
     {

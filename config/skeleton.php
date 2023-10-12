@@ -16,5 +16,6 @@ return [
   'main_color_h'      => 'red-900',
   'second_color'      => 'yellow-300',
   'color_animation'   => '',
+  'defaultTeamCode'   => 'default_team',
 
 ];

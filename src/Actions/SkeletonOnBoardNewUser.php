@@ -2,11 +2,13 @@
 
 namespace VendorName\Skeleton\Actions;
 
+use App\Models\Team;
 use App\Models\User;
-use App\Actions\Fortify\PasswordValidationRules;
-use Laravel\Fortify\Contracts\CreatesNewUsers;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Fortify\Contracts\CreatesNewUsers;
+use App\Actions\Fortify\PasswordValidationRules;
 use Illuminate\Validation\Rule;
 
 class SkeletonOnBoardNewUser implements CreatesNewUsers
@@ -30,12 +32,55 @@ class SkeletonOnBoardNewUser implements CreatesNewUsers
           'terms'      => check_hasTermsAndPrivacyPolicyFeatures() ? ['accepted', 'required'] : '',
       ])->validate();
 
-      return User::create([
-          // 'name'       => $input['name'],
-          'first_name' => $input['first_name'],
-          'last_name'  => $input['last_name'],
-          'email'      => $input['email'],
-          'password'   => Hash::make($input['password']),
-      ]);
+      return DB::transaction(function () use ($input) {
+          return tap(User::create([
+              'first_name' => $input['first_name'],
+              'last_name'  => $input['last_name'],
+              'email' => $input['email'],
+              'password' => Hash::make($input['password']),
+          ]), function (User $user) {
+            if(check_hasTeamFeatures()){
+              $this->createTeam($user);
+            }
+          });
+      });
+  }
+
+  /**
+   * Check team seetings to apply behaviour.
+   */
+  protected function getBehaviour($user)
+  {
+    if(check_hasTeamOwnershipOnCreateFeatures()){
+       $this->createTeam($user);
+    }
+    if(check_hasTeamAppDefaultMembershipFeatures()){
+       $this->addToDefaultTeam($user);
+    }
+  }
+
+  /**
+   * Create a personal team for the user.
+   */
+  protected function createTeam(User $user): void
+  {
+        $user->ownedTeams()->save(Team::forceCreate([
+            'user_id' => $user->id,
+            'name' => $user->username,
+            'personal_team' => true,
+        ]));
+  }
+
+  /**
+   * Add user to default App Team.
+   */
+  protected function addToDefaultTeam(User $user): void
+  {
+        $defaultTeam =
+        Team::firstOrCreate([
+          'code' => config('skeleton.defaultTeamCode'),
+          'personal_team' => false,
+          ]);
+        $defaultTeam->users()->attach($user);
   }
 }

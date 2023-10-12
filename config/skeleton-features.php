@@ -6,6 +6,8 @@ return [
   'hasApiFeatures'                   => false,
   'hasTermsAndPrivacyPolicyFeatures' => false,
   'hasTeamFeatures'                  => false,
+  'hasTeamOwnershipOnCreateFeatures' => true,
+  'hasTeamAppDefaultMembershipFeatures' => false,
   'hasSubscriptionFeatures'          => false,
   'hasTranslationFeatures'           => true,
 
