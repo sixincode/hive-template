@@ -227,6 +227,7 @@ foreach ($files as $file) {
         str_contains($file, determineSeparator("database/migrations/create_skeleton_table.php.stub")) => rename($file, determineSeparator("./database/migrations/create_".title_snake($packageSlugWithoutPrefix)."_table.php.stub")),
         str_contains($file, determineSeparator("config/skeleton.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix.".php")),
         str_contains($file, determineSeparator("config/skeleton-components.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-components.php")),
+        str_contains($file, determineSeparator("config/skeleton-features.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-features.php")),
         str_contains($file, determineSeparator("config/skeleton-layouts.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-layouts.php")),
         str_contains($file, determineSeparator("config/skeleton-middlewares.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-middlewares.php")),
         str_contains($file, determineSeparator("src/Actions/SkeletonOnBoardNewUser.php")) => rename($file, determineSeparator("./src/Actions/".$className."OnBoardNewUser.php")),
