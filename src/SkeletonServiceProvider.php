@@ -21,7 +21,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('skeleton')
-            ->hasConfigFile(['skeleton','skeleton-components','skeleton-layouts','skeleton-middlewares'])
+            ->hasConfigFile(['skeleton','skeleton-components','skeleton-features','skeleton-layouts','skeleton-middlewares'])
             ->hasViews()
             ->hasAssets()
             ->hasTranslations()
