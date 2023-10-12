@@ -4,17 +4,17 @@
     <div class="relative shadow sm:overflow-hidden h-screen flex items-center">
      <div class="absolute inset-0">
        <img class="h-full w-full object-cover"
-        src="{{asset('/vendor/skeleton/img/landing/topBgLanding.webp' )}}" class="bg-blue-200" alt="Blog Bg">
-        <div class="absolute inset-0 bg-black bg-opacity-30 mix-blend-multiply"></div>
-      </div>
-      <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 container mx-auto">
-        <h1 class="tracking-tight mt-6">
-          <span class="block text-white font-extrabold text-3xl sm:text-5xl lg:text-7xl">{{__('Blog')}}</span>
-        </h1>
-
-
-        </div>
-      </div>
+        src="{{asset('/vendor/skeleton/img/landing/topBgLanding.webp' )}}" class="bg-black" alt="Coming Soon">
+        <div class="absolute inset-0 bg-black bg-opacity-60 mix-blend-multiply"></div>
+     </div>
+     <x-hive-display-section component='boxedXSection' class='w-full'>
+         <div class="relative py-16 sm:py-24 lg:py-32">
+            <h1 class="tracking-tight mt-6">
+              <span class="block text-white font-extrabold text-3xl sm:text-5xl lg:text-7xl">{{__('Coming Soon')}}</span>
+            </h1>
+          </div>
+      </x-hive-display-section>
+     </div>
     </div>
   </div>
 </section>

@@ -9,9 +9,9 @@
       </div>
       <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 container mx-auto">
         <h1 class="tracking-tight mt-6">
-          <span class="block text-white font-extrabold text-3xl sm:text-5xl lg:text-7xl">{{config('skeleton.title')}}</span>
+          <span class="block text-white font-extrabold text-3xl sm:text-5xl lg:text-7xl">{!! config('skeleton.title') !!}</span>
         </h1>
-        <p class="text-slate-100 text-xl font-semibold mt-8">{{config('skeleton.slogan')}}</p>
+        <p class="text-slate-100 text-xl sm:text-2xl font-semibold mt-8">{!! config('skeleton.slogan') !!}</p>
 
 
         </div>
