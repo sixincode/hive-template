@@ -229,6 +229,8 @@ foreach ($files as $file) {
         str_contains($file, determineSeparator("config/skeleton-components.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-components.php")),
         str_contains($file, determineSeparator("config/skeleton-layouts.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-layouts.php")),
         str_contains($file, determineSeparator("config/skeleton-middlewares.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-middlewares.php")),
+        str_contains($file, determineSeparator("src/Actions/SkeletonOnBoardNewUser.php")) => rename($file, determineSeparator("./src/Actions/".$className."OnBoardNewUser.php")),
+
 
         // str_contains($file, determineSeparator("src/Components/Central/Landing/TopLanding.php")) => rename($file, determineSeparator("src/Components/Central/Landing/TopLanding.php")),
         // str_contains($file, determineSeparator("src/Components/Central/Landing/TwoLanding.php")) => rename($file, determineSeparator("src/Components/Central/Landing/TwoLanding.php")),
