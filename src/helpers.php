@@ -1,44 +1,67 @@
 <?php
-  if (! function_exists('base_components') && config('skeleton-features.base_components')) {
-      function base_components()
+  if (! function_exists('getDefaultBase')) {
+      function getDefaultBase()
       {
-        return 'skeleton::components';
+        return config('skeleton-views.defaultBase') ?: config('hive-display-views.defaultBase');
       }
   }
 
-  if (! function_exists('base_layouts') && config('skeleton-features.base_layouts')) {
+  if (! function_exists('base_layouts')) {
       function base_layouts()
       {
-        return 'skeleton::components';
+        return config('skeleton-views.baseLayouts') ?: config('hive-display-views.defaultBase');
       }
   }
 
-  if (! function_exists('base_headers') && config('skeleton-features.base_headers')) {
+  if (! function_exists('base_headers')) {
       function base_headers()
       {
-        return 'skeleton::components';
+        return config('skeleton-views.baseHeaders') ?: config('hive-display-views.defaultBase');
       }
   }
 
-  if (! function_exists('base_navigations') && config('skeleton-features.base_navigations')) {
+  if (! function_exists('base_navigations')) {
       function base_navigations()
       {
-        return 'skeleton::components';
+        return config('skeleton-views.baseNavigations') ?: config('hive-display-views.defaultBase');
       }
   }
 
-  if (! function_exists('base_sidebars') && config('skeleton-features.base_sidebars')) {
+  if (! function_exists('base_sidebars')) {
       function base_sidebars()
       {
-        return 'skeleton::components';
+        return config('skeleton-views.baseSidebars') ?: config('hive-display-views.defaultBase');
       }
   }
 
-  if (! function_exists('base_footers') && config('skeleton-features.base_footers')) {
+  if (! function_exists('base_footers')) {
       function base_footers()
       {
-          return 'skeleton::components';
+        return config('skeleton-views.baseFooters') ?: config('hive-display-views.defaultBase');
       }
+  }
+
+  // if (! function_exists('getLayoutApp')) {
+  //     function getLayoutApp()
+  //     {
+  //       return config('skeleton.layouts.app.default');
+  //     }
+  // }
+
+  // TABLES CHECK
+
+  if(function_exists('tableUsers')) {
+    function tableUsers()
+    {
+      return config('skeleton.table_names.users');
+    }
+  }
+
+  if(function_exists('tableLogins')) {
+    function tableLogins()
+    {
+      return config('skeleton.table_names.logins');
+    }
   }
 
   if (! function_exists('has_translations')) {
@@ -130,58 +153,81 @@
 
   // JETSTREAM AND FORTIFY PROCESSES
          // Views
-   if (! function_exists('hasLoginView') && config('skeleton-features.hasLoginView')) {
+   if (! function_exists('hasLoginView')) {
      function hasLoginView()
      {
        return view('skeleton::central.auth.login');
      }
    }
 
-   if (! function_exists('hasRegisterView') && config('skeleton-features.hasRegisterView')) {
+   if (! function_exists('hasRegisterView')) {
      function hasRegisterView()
      {
        return view('skeleton::central.auth.register');
      }
    }
 
-   if (! function_exists('hasVerifyEmailView') && config('skeleton-features.hasVerifyEmailView')) {
+   if (! function_exists('hasVerifyEmailView')) {
      function hasVerifyEmailView()
      {
        return view('skeleton::central.auth.verify-email');
      }
    }
 
-   if (! function_exists('hasTwoFactorChallengeView') && config('skeleton-features.hasTwoFactorChallengeView')) {
+   if (! function_exists('hasTwoFactorChallengeView')) {
      function hasTwoFactorChallengeView()
      {
        return view('skeleton::central.auth.two-factor-challenge');
      }
    }
 
-   if (! function_exists('hasRequestPasswordResetLinkView') && config('skeleton-features.hasRequestPasswordResetLinkView')) {
+   if (! function_exists('hasRequestPasswordResetLinkView')) {
      function hasRequestPasswordResetLinkView()
      {
        return view('skeleton::central.auth.forgot-password');
      }
    }
 
-   if (! function_exists('hasResetPasswordView') && config('skeleton-features.hasResetPasswordView')) {
+   if (! function_exists('hasResetPasswordView')) {
      function hasResetPasswordView()
      {
        return view('skeleton::central.auth.reset-password');
      }
    }
 
-   if (! function_exists('hasConfirmPasswordView') && config('skeleton-features.hasConfirmPasswordView')) {
+   if (! function_exists('hasConfirmPasswordView')) {
      function hasConfirmPasswordView()
      {
        return view('skeleton::central.auth.confirm-password');
      }
    }
 
-   if (! function_exists('hasCreateNewUserClas') && config('skeleton-features.hasCreateNewUserClas')) {
-     function hasCreateNewUserClas()
+   if (! function_exists('hasCreateNewUserClass')) {
+     function hasCreateNewUserClass()
      {
        return VendorName\Skeleton\Actions\SkeletonOnBoardNewUser::class;
+     }
+   }
+
+   // SUBSCRIPTIONS
+   if (! function_exists('hasDefaultSubscriptionPlanPlan')) {
+     function hasDefaultSubscriptionPlanPlan()
+     {
+       return config('skeleton-features.addSubscriptionPlanToNewUser');
+     }
+   }
+
+   // SETTINGS
+   if (! function_exists('hasDefaultSettingsModel')) {
+     function hasDefaultSettingsModel()
+     {
+       return config('skeleton-features.addSubscriptionPlanToNewUser');
+     }
+   }
+
+   if (! function_exists('hasJetstream')) {
+     function hasJetstream()
+     {
+       return config('skeleton.hasJetstream');
      }
    }

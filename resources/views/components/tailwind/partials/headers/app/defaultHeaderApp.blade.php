@@ -56,8 +56,7 @@
                <hr class="w-px h-6 bg-slate-200" />
 
                <!-- User button -->
-               <x-hive-display-card source='elements' component='auth.userDropdown' />
-           </div>
+            </div>
 
        </div>
    </div>

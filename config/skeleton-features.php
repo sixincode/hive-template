@@ -9,7 +9,10 @@ return [
   'hasTeamOwnershipOnCreateFeatures' => true,
   'hasTeamAppDefaultMembershipFeatures' => false,
   'hasSubscriptionFeatures'          => false,
+  'addSubscriptionPlanToNewUser'     => false,
   'hasTranslationFeatures'           => true,
+  'addSubscriptionPlanToNewUser'     => false,
+
 
         // Use 'skeleton::components' as base for following components:
   'base_components'                  => true,

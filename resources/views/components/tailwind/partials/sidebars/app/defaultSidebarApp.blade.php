@@ -108,6 +108,7 @@
                     icon='announcement'
                     iconWidth='1.5'/>
 
+                    @if(Route::has('user.events.index') )
                     <x-hive-display-link
                     title='{{__("Events")}}'
                     url='{{route("user.events.index")}}'
@@ -115,7 +116,9 @@
                     component='mainAuth'
                     icon='announcement'
                     iconWidth='1.5'/>
+                    @endif
 
+                    @if(Route::has('user.categories.index') )
                     <x-hive-display-link
                     title='{{__("Categories")}}'
                     url='{{route("user.categories.index")}}'
@@ -123,6 +126,7 @@
                     component='mainAuth'
                     icon='announcement'
                     iconWidth='1.5'/>
+                    @endif
 
                 </ul>
             </div>

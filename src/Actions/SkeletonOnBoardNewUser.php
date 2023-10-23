@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
-use App\Actions\Fortify\PasswordValidationRules;
 use Illuminate\Validation\Rule;
 
 class SkeletonOnBoardNewUser implements CreatesNewUsers
@@ -36,6 +35,7 @@ class SkeletonOnBoardNewUser implements CreatesNewUsers
           return tap(User::create([
               'first_name' => $input['first_name'],
               'last_name'  => $input['last_name'],
+              'username'   => $input['username'],
               'email' => $input['email'],
               'password' => Hash::make($input['password']),
           ]), function (User $user) {

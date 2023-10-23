@@ -13,11 +13,29 @@ trait SkeletonMigrationsTrait
     // $this->migrateSkeletonThreeUp();
   }
 
+  public function migrateUpAll(): void
+  {
+    \HiveAlpha::migrateUp();
+    // \HiveStream::migrateUp();
+    // \HivePosts::migrateUp();
+    // \HiveCalendar::migrateUp();
+    $this->migrateUp();
+  }
+
   public function migrateDown(): void
   {
     $this->migrateSkeletonOneDown();
     // $this->migrateSkeletonTwoDown();
     // $this->migrateSkeletonThreeDown();
+  }
+
+  public function migrateDownAll(): void
+  {
+    // \HiveCalendar::migrateDown();
+    // \HivePosts::migrateDown();
+    // \HiveStream::migrateDown();
+    \HiveAlpha::migrateDown();
+    $this->migrateDown();
   }
 
   public function migrateSkeletonOneUp(): void

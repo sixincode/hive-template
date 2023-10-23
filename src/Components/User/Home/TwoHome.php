@@ -15,6 +15,6 @@ class TwoHome extends Component
 
     public function render()
     {
-      return view('skeleton::components.user.settings.twoHome');
+      return view('skeleton::components.user.home.twoHome');
     }
 }

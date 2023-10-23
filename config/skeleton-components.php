@@ -26,13 +26,13 @@ return [
       'central-contact-three'    => SkeletonComponents\Central\Contact\ThreeContact::class,
 
 
-      // 'user-home-top'            => SkeletonComponents\User\Home\TopHome::class,
-      // 'user-home-two'            => SkeletonComponents\User\Home\TwoHome::class,
-      // 'user-home-three'          => SkeletonComponents\User\Home\ThreeHome::class,
-      //
-      // 'user-settings-top'        => SkeletonComponents\User\Settings\TopSettings::class,
-      // 'user-settings-two'        => SkeletonComponents\User\Settings\TwoSettings::class,
-      // 'user-settings-three'      => SkeletonComponents\User\Settings\ThreeSettings::class,
+      'user-home-top'            => SkeletonComponents\User\Home\TopHome::class,
+      'user-home-two'            => SkeletonComponents\User\Home\TwoHome::class,
+      'user-home-three'          => SkeletonComponents\User\Home\ThreeHome::class,
+
+      'user-settings-top'        => SkeletonComponents\User\Settings\TopSettings::class,
+      'user-settings-two'        => SkeletonComponents\User\Settings\TwoSettings::class,
+      'user-settings-three'      => SkeletonComponents\User\Settings\ThreeSettings::class,
 
       // 'admin-panels-top'            => SkeletonComponents\Admin\Panels\TopPanels::class,
       // 'admin-panels-two'            => SkeletonComponents\Admin\Panels\TwoPanels::class,
@@ -50,8 +50,8 @@ return [
       'central-blog-main'      => SkeletonLivewire\Central\Blog\MainBlog::class,
       'central-contact-main'   => SkeletonLivewire\Central\Contact\MainContact::class,
       //
-      // 'user-home-main'         => SkeletonLivewire\User\Home\UserHome::class,
-      // 'user-settings-main'     => SkeletonLivewire\User\Settings\UserSettings::class,
+      'user-home-main'         => SkeletonLivewire\User\Home\UserHome::class,
+      'user-settings-main'     => SkeletonLivewire\User\Settings\UserSettings::class,
       //
       // 'admin-panels-main'      => SkeletonLivewire\Admin\Panels\AdminPanels::class,
       // 'admin-controls-main'    => SkeletonLivewire\Admin\Controls\AdminControls::class,
