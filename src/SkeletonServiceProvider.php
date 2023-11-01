@@ -21,7 +21,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('skeleton')
-            ->hasConfigFile(['skeleton','skeleton-components','skeleton-features','skeleton-layouts','skeleton-middlewares'])
+            ->hasConfigFile(['skeleton','skeleton-components','skeleton-features','skeleton-layouts','skeleton-middlewares','skeleton-views'])
             ->hasViews()
             ->hasAssets()
             ->hasTranslations()
@@ -33,10 +33,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
             // ->runsMigrations()
             ->hasCommand(SkeletonCommand::class);
 
-            // $this->registerskeletonDatabaseMethods();
+            // $this->registerSkeletonDatabaseMethods();
     }
 
-    // private function registerskeletonDatabaseMethods(): void
+    // private function registerSkeletonDatabaseMethods(): void
     // {
     //   Blueprint::macro('addSkeletonFields', function (Blueprint $table, $properties = []) {
     //     DatabaseTraits\SkeletonDatabaseDefinitions::addSkeletonFields($table, $properties);

@@ -5,14 +5,18 @@ return [
   'hasRegistrationFeatures'          => false,
   'hasApiFeatures'                   => false,
   'hasTermsAndPrivacyPolicyFeatures' => false,
-  'hasTeamFeatures'                  => false,
-  'hasTeamOwnershipOnCreateFeatures' => true,
-  'hasTeamAppDefaultMembershipFeatures' => false,
+
   'hasSubscriptionFeatures'          => false,
   'addSubscriptionPlanToNewUser'     => false,
   'hasTranslationFeatures'           => true,
   'addSubscriptionPlanToNewUser'     => false,
 
+  'hasTeamFeatures'                  => false,
+  'hasTeamOwnershipOnCreateFeatures' => true,
+  'hasTeamAppDefaultMembershipFeatures' => false,
+  'defaultTeamCode'                     => '4000',
+  'mainTeamReference'                   => 'aggregations',
+  'defaultTeamReference'                => 'teams',
 
         // Use 'skeleton::components' as base for following components:
   'base_components'                  => true,

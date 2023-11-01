@@ -6,15 +6,16 @@ use VendorName\Skeleton\Database\Seeders as Seeders;
 
 trait SkeletonSeedersTrait
 {
-  public function seed(): void
+  public function seedAll(): void
   {
-    $thid->seedOne();
+    \HiveAlpha::seed();
+    $thid->seed();
     // $thid->seedTwo();
     // $thid->seedthree();
 
   }
 
-  public function seedOne(): void
+  public function seed(): void
   {
     $seeder = new Seeders\SkeletonOneDatabaseSeeder;
     $seeder->run();

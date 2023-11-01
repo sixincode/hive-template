@@ -123,10 +123,33 @@
     }
   }
 
+  // TEAMS
+
   if (! function_exists('hasTeamFeatures')) {
     function hasTeamFeatures()
     {
         return config('skeleton-features.hasTeamFeatures');
+    }
+  }
+
+  if (! function_exists('getDefaultTeamCode')) {
+    function getDefaultTeamCode()
+    {
+        return config('skeleton-features.defaultTeamCode');
+    }
+  }
+
+  if (! function_exists('getMainTeamReference')) {
+    function getMainTeamReference()
+    {
+        return config('skeleton-features.mainTeamReference');
+    }
+  }
+
+  if (! function_exists('check_getDefaultTeamReference')) {
+    function check_getDefaultTeamReference()
+    {
+        return config('skeleton-features.defaultTeamReference');
     }
   }
 

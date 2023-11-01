@@ -230,6 +230,7 @@ foreach ($files as $file) {
         str_contains($file, determineSeparator("config/skeleton-features.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-features.php")),
         str_contains($file, determineSeparator("config/skeleton-layouts.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-layouts.php")),
         str_contains($file, determineSeparator("config/skeleton-middlewares.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-middlewares.php")),
+        str_contains($file, determineSeparator("config/skeleton-views.php")) => rename($file, determineSeparator("./config/".$packageSlugWithoutPrefix."-views.php")),
         str_contains($file, determineSeparator("src/Actions/SkeletonOnBoardNewUser.php")) => rename($file, determineSeparator("./src/Actions/".$className."OnBoardNewUser.php")),
 
 
