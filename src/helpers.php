@@ -81,7 +81,7 @@
   if (! function_exists('locale_langs')) {
       function locale_langs()
       {
-        return config('skeleton.locale_langs');
+        return config('skeleton.translations');
       }
   }
 
@@ -139,6 +139,13 @@
     }
   }
 
+  if (! function_exists('getDefaultCommunityCode')) {
+    function getDefaultCommunityCode()
+    {
+        return config('skeleton-features.defaultCommunityCode');
+    }
+  }
+
   if (! function_exists('getMainTeamReference')) {
     function getMainTeamReference()
     {
@@ -146,10 +153,24 @@
     }
   }
 
+  if (! function_exists('getMainCommunityReference')) {
+    function getMainCommunityReference()
+    {
+        return config('skeleton-features.mainCommunityReference');
+    }
+  }
+
   if (! function_exists('check_getDefaultTeamReference')) {
     function check_getDefaultTeamReference()
     {
         return config('skeleton-features.defaultTeamReference');
+    }
+  }
+
+  if (! function_exists('check_getDefaultCommunityReference')) {
+    function check_getDefaultCommunityReference()
+    {
+        return config('skeleton-features.defaultCommunityReference');
     }
   }
 
@@ -252,5 +273,12 @@
      function hasJetstream()
      {
        return config('skeleton.hasJetstream');
+     }
+   }
+
+   if (! function_exists('hasNewsletterSubscriptionEmailVerificationRequest')) {
+     function hasNewsletterSubscriptionEmailVerificationRequest()
+     {
+       return config('skeleton-features.emailVerificationRequired');
      }
    }

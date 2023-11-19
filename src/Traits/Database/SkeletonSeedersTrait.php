@@ -17,7 +17,7 @@ trait SkeletonSeedersTrait
 
   public function seed(): void
   {
-    $seeder = new Seeders\SkeletonOneDatabaseSeeder;
+    $seeder = new Seeders\SkeletonDatabaseSeeder;
     $seeder->run();
   }
 

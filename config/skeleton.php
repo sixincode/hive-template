@@ -9,12 +9,6 @@ return [
   'appInMaintenance'  => false,
   'appIsComingSoon'   => false,
 
-  // table names
-  'table_names'  => [
-      'logins'   => 'logins',
-      'users'    => 'users',
-  ],
-
   // translations
   'default_lang'      => 'en',
   'lang_route'        => 'lang',
@@ -30,7 +24,7 @@ return [
   'color_animation'   => '',
   // teams
   'defaultTeamCode'   => 'default_team',
-  // tables
+  // tables name
   'table_names'       => [
       'tableOne'   => 'tableOne',
   ],

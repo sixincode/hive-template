@@ -1,60 +1,60 @@
 <?php
 
-use VendorName\Skeleton\Components as SkeletonComponents;
-use VendorName\Skeleton\Http\Livewire   as SkeletonLivewire;
+use VendorName\Skeleton\Components as Components;
+use VendorName\Skeleton\Http\Livewire   as Livewires;
 
 // config for VendorName/Skeleton Components
 return [
     'blade' => [
-      // 'component'   => SkeletonComponents\Component::class,
-      'central-landing-top'      => SkeletonComponents\Central\Landing\TopLanding::class,
-      'central-landing-two'      => SkeletonComponents\Central\Landing\TwoLanding::class,
-      'central-landing-three'    => SkeletonComponents\Central\Landing\ThreeLanding::class,
-      'central-landing-four'     => SkeletonComponents\Central\Landing\FourLanding::class,
-      'central-landing-five'     => SkeletonComponents\Central\Landing\FiveLanding::class,
+      // 'component'   => Components\Component::class,
+      'central-landing-top'      => Components\Central\Landing\TopLanding::class,
+      'central-landing-two'      => Components\Central\Landing\TwoLanding::class,
+      'central-landing-three'    => Components\Central\Landing\ThreeLanding::class,
+      'central-landing-four'     => Components\Central\Landing\FourLanding::class,
+      'central-landing-five'     => Components\Central\Landing\FiveLanding::class,
 
-      'central-about-top'        => SkeletonComponents\Central\About\TopAbout::class,
-      'central-about-two'        => SkeletonComponents\Central\About\TwoAbout::class,
-      'central-about-three'      => SkeletonComponents\Central\About\ThreeAbout::class,
+      'central-about-top'        => Components\Central\About\TopAbout::class,
+      'central-about-two'        => Components\Central\About\TwoAbout::class,
+      'central-about-three'      => Components\Central\About\ThreeAbout::class,
 
-      'central-blog-top'         => SkeletonComponents\Central\Blog\TopBlog::class,
-      'central-blog-two'         => SkeletonComponents\Central\Blog\TwoBlog::class,
-      'central-blog-three'       => SkeletonComponents\Central\Blog\ThreeBlog::class,
+      'central-blog-top'         => Components\Central\Blog\TopBlog::class,
+      'central-blog-two'         => Components\Central\Blog\TwoBlog::class,
+      'central-blog-three'       => Components\Central\Blog\ThreeBlog::class,
 
-      'central-contact-top'      => SkeletonComponents\Central\Contact\TopContact::class,
-      'central-contact-two'      => SkeletonComponents\Central\Contact\TwoContact::class,
-      'central-contact-three'    => SkeletonComponents\Central\Contact\ThreeContact::class,
+      'central-contact-top'      => Components\Central\Contact\TopContact::class,
+      'central-contact-two'      => Components\Central\Contact\TwoContact::class,
+      'central-contact-three'    => Components\Central\Contact\ThreeContact::class,
 
 
-      'user-home-top'            => SkeletonComponents\User\Home\TopHome::class,
-      'user-home-two'            => SkeletonComponents\User\Home\TwoHome::class,
-      'user-home-three'          => SkeletonComponents\User\Home\ThreeHome::class,
+      'user-home-top'            => Components\User\Home\TopHome::class,
+      'user-home-two'            => Components\User\Home\TwoHome::class,
+      'user-home-three'          => Components\User\Home\ThreeHome::class,
 
-      'user-settings-top'        => SkeletonComponents\User\Settings\TopSettings::class,
-      'user-settings-two'        => SkeletonComponents\User\Settings\TwoSettings::class,
-      'user-settings-three'      => SkeletonComponents\User\Settings\ThreeSettings::class,
+      'user-settings-top'        => Components\User\Settings\TopSettings::class,
+      'user-settings-two'        => Components\User\Settings\TwoSettings::class,
+      'user-settings-three'      => Components\User\Settings\ThreeSettings::class,
 
-      // 'admin-panels-top'            => SkeletonComponents\Admin\Panels\TopPanels::class,
-      // 'admin-panels-two'            => SkeletonComponents\Admin\Panels\TwoPanels::class,
-      // 'admin-panels-three'          => SkeletonComponents\Admin\Panels\ThreePanels::class,
+      // 'admin-panels-top'            => Components\Admin\Panels\TopPanels::class,
+      // 'admin-panels-two'            => Components\Admin\Panels\TwoPanels::class,
+      // 'admin-panels-three'          => Components\Admin\Panels\ThreePanels::class,
       //
-      // 'admin-controls-top'        => SkeletonComponents\Admin\Controls\TopControls::class,
-      // 'admin-controls-two'        => SkeletonComponents\Admin\Controls\TwoControls::class,
-      // 'admin-controls-three'      => SkeletonComponents\Admin\Controls\ThreeControls::class,
+      // 'admin-controls-top'        => Components\Admin\Controls\TopControls::class,
+      // 'admin-controls-two'        => Components\Admin\Controls\TwoControls::class,
+      // 'admin-controls-three'      => Components\Admin\Controls\ThreeControls::class,
 
     ],
     'livewire' => [
-      // 'component'   => SkeletonLivewire\Component::class,
-      'central-landing-main'   => SkeletonLivewire\Central\Landing\MainLanding::class,
-      'central-about-main'     => SkeletonLivewire\Central\About\MainAbout::class,
-      'central-blog-main'      => SkeletonLivewire\Central\Blog\MainBlog::class,
-      'central-contact-main'   => SkeletonLivewire\Central\Contact\MainContact::class,
+      // 'component'   => Livewires\Component::class,
+      'central-landing-main'   => Livewires\Central\Landing\MainLanding::class,
+      'central-about-main'     => Livewires\Central\About\MainAbout::class,
+      'central-blog-main'      => Livewires\Central\Blog\MainBlog::class,
+      'central-contact-main'   => Livewires\Central\Contact\MainContact::class,
       //
-      'user-home-main'         => SkeletonLivewire\User\Home\UserHome::class,
-      'user-settings-main'     => SkeletonLivewire\User\Settings\UserSettings::class,
+      'user-home-main'         => Livewires\User\Home\UserHome::class,
+      'user-settings-main'     => Livewires\User\Settings\UserSettings::class,
       //
-      // 'admin-panels-main'      => SkeletonLivewire\Admin\Panels\AdminPanels::class,
-      // 'admin-controls-main'    => SkeletonLivewire\Admin\Controls\AdminControls::class,
+      // 'admin-panels-main'      => Livewires\Admin\Panels\AdminPanels::class,
+      // 'admin-controls-main'    => Livewires\Admin\Controls\AdminControls::class,
     ],
     'prefix' => 'skeleton',
 ];

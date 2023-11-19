@@ -15,8 +15,13 @@ return [
   'hasTeamOwnershipOnCreateFeatures' => true,
   'hasTeamAppDefaultMembershipFeatures' => false,
   'defaultTeamCode'                     => '4000',
-  'mainTeamReference'                   => 'aggregations',
-  'defaultTeamReference'                => 'teams',
+  'defaultCommunityCode'                => '6000',
+  'mainTeamReference'                   => 'publisher',
+  'mainCommunityReference'              => 'aggregation',
+  'defaultTeamReference'                => 'team',
+  'defaultCommunityReference'           => 'community',
+
+  'emailVerificationRequired'           => true,
 
         // Use 'skeleton::components' as base for following components:
   'base_components'                  => true,

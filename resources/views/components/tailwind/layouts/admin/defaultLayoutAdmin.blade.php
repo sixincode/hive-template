@@ -27,7 +27,7 @@
            </div>
              <!-- Page Content -->
             <div class="flex-1 flex-col lg:pl-64">
-              <x-hive-display-na-adminv  />
+              <x-hive-display-nav-adminv  />
               <main id="main">
               {{ $slot }}
               </main>

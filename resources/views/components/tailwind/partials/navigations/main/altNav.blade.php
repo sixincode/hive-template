@@ -42,7 +42,7 @@
 
       <div class="hidden lg:ml-4 lg:flex lg:items-center">
         <div class="flex justify-center space-x-6">
-          <x-hive-display-lang-switch :values='["fr","en"]' />
+          <x-hive-translation-lang-switch />
         </div>
       </div>
 
